@@ -1,6 +1,6 @@
 public class Jogada {
     private int colunajogada;
-    private int[] posicoesInvalid = new int[42];
+    private int[][] posicoesInvalidas = new int[6][7];
 
     public Jogada(){
 
