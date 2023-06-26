@@ -1,12 +1,14 @@
 public class Jogada {
-    private int colunajogada;
-    private int[][] posicoesInvalidas = new int[6][7];
+    private int chosenCol;
 
     public Jogada(){
-
     }
 
-    public int posicionarPeca(){
-        return 0;
+    public void setCol(int col){
+        this.chosenCol = col;
+    }
+
+    public int getCol(){
+        return chosenCol;
     }
 }
