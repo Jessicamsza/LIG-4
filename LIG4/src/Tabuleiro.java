@@ -5,7 +5,7 @@ public class Tabuleiro {
     }
 
     public boolean isValidCol(int escolha) {
-        if (escolha < 1 && escolha > 7) {
+        if (escolha < 1 || escolha > 7) {
             System.out.println("! A posição deve estar entre 1 e 7 !");
             return false;
         }else if (matrizTabuleiro[0][escolha-1] != '\0'){
