@@ -1,4 +1,4 @@
-ppublic class Tabuleiro {
+public class Tabuleiro {
     private char[][] matrizTabuleiro = new char[6][7];
     
     public Tabuleiro() {
