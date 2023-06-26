@@ -5,12 +5,25 @@ public class Tabuleiro {
     }
 
     public boolean isValidCol(int escolha) {
-        return escolha >= 1 && escolha <= 7;
+        if (escolha < 1 && escolha > 7) {
+            System.out.println("! A posição deve estar entre 1 e 7 !");
+            return false;
+        }else if (matrizTabuleiro[0][escolha-1] != '\0'){
+            System.out.println("! Essa coluna está cheia !");
+            return false;
+        }else{
+            return true;
+        }
     }
 
     public void posicionarPeca(int col, char peca){
-        // 6° linha
-        matrizTabuleiro[5][col - 1] = peca;
+        for (int i = (matrizTabuleiro.length-1); i>=0; i--){
+            char linha = matrizTabuleiro[i][col-1];
+            if (linha == '\0'){
+                matrizTabuleiro[i][col-1] = peca;
+                break;
+            }
+        }
     }
     
     public void displayTabuleiro() {
@@ -36,5 +49,14 @@ public class Tabuleiro {
             System.out.print("  " + (col + 1) + " ");
         }
         System.out.println(" ");
+    }
+
+
+    public void reset(){
+        for (int i = (matrizTabuleiro.length-1); i>=0; i--){
+            for(int j = (matrizTabuleiro[0].length - 1); j>=0; j--){
+                this.matrizTabuleiro[i][j] = '\0';
+            }
+        }
     }
 }
