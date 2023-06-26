@@ -3,7 +3,7 @@ public class Jogo {
     
     public void jogar(){
         Tabuleiro tabuleiro = new Tabuleiro();
-        Jogador jog1 = new Jogador(true, 'B');
+        Jogador jog1 = new Jogador(true, 'X');
         Jogada jogada = new Jogada();
 
         tabuleiro.displayTabuleiro();
