@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Jogador {
 	private boolean turn;
 	private char peca;
@@ -9,18 +7,15 @@ public class Jogador {
 	    this.peca = peca;
 	}
 
+	public void setTurn(boolean turn){
+		this.turn = turn;
+	}
+
+	public boolean getTurn(){
+		return turn;
+	}
+
 	public char getPeca() {
 		return peca;
-	}
-	
-	public int seletcCol(){
-		Scanner scan = new Scanner(System.in);
-		int escolhaJogador;
-
-		System.out.print("Selecione uma coluna para Jogar: ");
-        escolhaJogador = scan.nextInt();
-		scan.close();
-
-		return escolhaJogador;
 	}
 }
