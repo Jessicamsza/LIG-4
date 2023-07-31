@@ -10,7 +10,7 @@ public class Maquina extends Jogador{
 
 	public int escolherColuna(){
          try {
-            Thread.sleep(200);
+            Thread.sleep(300);
         } catch (InterruptedException e){
             return 1;
         }
