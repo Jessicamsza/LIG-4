@@ -112,7 +112,7 @@ public class Prejogo {
         System.out.println("\t\t Escolha o NÍVEL DE MALUQUICE");
         System.out.println(" 1- Leve (10%)");
         System.out.println(" 2- Controlável (30%)");
-        System.out.println(" 3- Super Maluco (70%)");
+        System.out.println(" 3- Super Maluco (60%)");
         while(true){
             try{
                 int escolha = InputHandler.getIntInput(3);
