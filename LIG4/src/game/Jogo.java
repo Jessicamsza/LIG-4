@@ -24,7 +24,7 @@ public class Jogo{
             tabuleiro = new TabuleiroTurboMaluco(0.3);
         }
         else if (modoJogo.equals("turbo maluco 3")){
-            tabuleiro = new TabuleiroTurboMaluco(0.7);
+            tabuleiro = new TabuleiroTurboMaluco(0.6);
         }
 
         jogador2 = singlePlayer ? new Maquina(false, 'Y') : new Jogador(false, 'Y');
