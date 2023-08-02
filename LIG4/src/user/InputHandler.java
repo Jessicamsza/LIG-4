@@ -1,5 +1,6 @@
 package user;
 import java.util.Scanner;
+import exceptions.ColunaInvalida;
 import exceptions.ForaDoIndice;
 import java.util.InputMismatchException;
 
@@ -23,16 +24,15 @@ public class InputHandler {
             }
         }
     }
-
-    public static int getColInput() {
+    
+    public static int getColInput() throws ColunaInvalida {
         while (true) {
             System.out.print("Sua Escolha: ");
             try {
                 return scanner.nextInt();
             } catch (InputMismatchException e) {
                 scanner.nextLine(); // Consome a entrada inválida
-                // Retorna -1 para indicar erro na Mensagem
-                return -1;
+                throw new ColunaInvalida(" ! escolha um NÚMERO INTEIRO entre 1 a 7 !\n");
             }
         }
     }
