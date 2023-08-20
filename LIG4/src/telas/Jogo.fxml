@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../design/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.Jogo">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1200.0">
+         <image>
+            <Image url="@../design/img/background-Tabuleiro.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="mensagem" layoutX="297.0" layoutY="39.0" prefHeight="158.0" prefWidth="606.0">
+         <children>
+            <Label fx:id="jog1Label" layoutX="37.0" layoutY="53.0" text="Jogador 1" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="jog2Label" layoutX="504.0" layoutY="53.0" prefHeight="27.0" prefWidth="79.0" text="Jogador 2" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Circle fill="#df5c5c" layoutX="76.0" layoutY="107.0" radius="18.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#ffcf00" layoutX="526.0" layoutY="102.0" radius="18.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label fx:id="pontuacao" layoutX="270.0" prefHeight="38.0" prefWidth="79.0" text="0  x  0" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="38.0" text="pontuação" textFill="WHITE" />
+            <Label layoutX="207.0" layoutY="76.0" prefHeight="27.0" prefWidth="167.0" text="ESTÁ NA VEZ DE: " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="jogadorLabel" layoutX="334.0" layoutY="76.0" text="Jogador 1" textFill="#df5c5c">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="aviso" alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" layoutY="130.0" prefHeight="28.0" prefWidth="260.0" textFill="RED">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="vitoriaLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" layoutY="102.0" prefHeight="28.0" prefWidth="260.0" textFill="#00ff40">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane fx:id="interfaceTabuleiro" layoutX="364.0" layoutY="201.0" prefHeight="349.0" prefWidth="554.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" maxWidth="91.99996337890624" minWidth="10.0" prefWidth="53.60003662109375" />
+          <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="94.4" minWidth="10.0" prefWidth="75.99996337890624" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="118.39999999999999" minWidth="10.0" prefWidth="71.20003662109374" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="151.9999755859375" minWidth="0.0" prefWidth="73.60002441406252" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="183.80002441406248" minWidth="10.0" prefWidth="74.40001220703124" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="118.4000244140625" minWidth="0.0" prefWidth="73.59990234374999" />
+            <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="108.79992675781244" minWidth="0.0" prefWidth="73.60009765625" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="64.0" vgrow="NEVER" />
+          <RowConstraints fillHeight="false" maxHeight="65.60001831054689" minHeight="10.0" prefHeight="54.39997558593751" valignment="CENTER" vgrow="NEVER" />
+          <RowConstraints fillHeight="false" maxHeight="76.8000244140625" minHeight="10.0" prefHeight="54.40001831054687" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="87.99998168945314" minHeight="0.0" prefHeight="56.0" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="96.0" minHeight="0.0" prefHeight="57.600006103515625" valignment="CENTER" vgrow="NEVER" />
+            <RowConstraints maxHeight="100.79999389648435" minHeight="0.0" prefHeight="55.0" valignment="CENTER" vgrow="NEVER" />
+        </rowConstraints>
+      </GridPane>
+      <Button fx:id="resetBtn" layoutX="524.0" layoutY="647.0" mnemonicParsing="false" onAction="#resetar" prefHeight="38.0" prefWidth="151.0" text="Resetar Tabuleiro" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Button>
+      <Pane fx:id="buttonsPane" layoutX="343.0" layoutY="548.0" prefHeight="86.0" prefWidth="538.0">
+         <children>
+            <Button fx:id="col1" layoutX="14.0" layoutY="6.0" mnemonicParsing="false" onAction="#receberColuna" prefHeight="45.0" prefWidth="45.0" styleClass="col-Btn" text="1" textFill="WHITE" userData="0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="col2" layoutX="91.0" layoutY="6.0" mnemonicParsing="false" onAction="#receberColuna" prefHeight="45.0" prefWidth="45.0" styleClass="col-Btn" text="2" textFill="WHITE" userData="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="col3" layoutX="166.0" layoutY="6.0" mnemonicParsing="false" onAction="#receberColuna" prefHeight="45.0" prefWidth="45.0" styleClass="col-Btn" text="3" textFill="WHITE" userData="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="col4" layoutX="239.0" layoutY="6.0" mnemonicParsing="false" onAction="#receberColuna" prefHeight="45.0" prefWidth="45.0" styleClass="col-Btn" text="4" textFill="WHITE" userData="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="col5" layoutX="315.0" layoutY="6.0" mnemonicParsing="false" onAction="#receberColuna" prefHeight="45.0" prefWidth="45.0" styleClass="col-Btn" text="5" textFill="WHITE" userData="4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="col7" cache="true" cacheHint="QUALITY" layoutX="460.0" layoutY="6.0" mnemonicParsing="false" onAction="#receberColuna" prefHeight="45.0" prefWidth="45.0" styleClass="col-Btn" text="7" textFill="WHITE" userData="6">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="col6" layoutX="386.0" layoutY="6.0" mnemonicParsing="false" onAction="#receberColuna" prefHeight="45.0" prefWidth="45.0" styleClass="col-Btn" text="6" textFill="WHITE" userData="5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="-4.0" layoutY="63.0" prefHeight="19.0" prefWidth="547.0" text="Selecione uma Coluna acima Para Jogar Sua Peça." textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="28.0" layoutY="264.0" prefHeight="158.0" prefWidth="140.0">
+         <children>
+            <Button layoutX="8.0" layoutY="28.0" mnemonicParsing="false" onAction="#modoDeJogo" prefHeight="36.0" prefWidth="131.0" text="Trocar Preferencias" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="8.0" layoutY="74.0" mnemonicParsing="false" onAction="#menu" prefHeight="36.0" prefWidth="131.0" text="Voltar para o Menu" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="1.0" layoutY="5.0" prefHeight="18.0" prefWidth="140.0" text="* sair dessa tela irá reiniciar o jogo" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
