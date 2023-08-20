@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" stylesheets="@../design/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="preJogo.Regras">
+   <children>
+      <ImageView fitHeight="700.0" fitWidth="1200.0">
+         <image>
+            <Image url="@../design/img/background.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="529.0" layoutY="56.0" text="Regras do LIG4" textFill="#ffcf00">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Pane layoutX="259.0" layoutY="96.0" prefHeight="246.0" prefWidth="696.0">
+         <children>
+            <Text fill="WHITE" layoutX="8.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• O jogo é jogado em um tabuleiro vertical com 6 linhas e 7 colunas." wrappingWidth="639.2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="8.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• Dois jogadores alternam em cada turno, colocando uma peça na coluna de sua escolha." wrappingWidth="609.3367309570311">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="8.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• O objetivo é formar uma sequência de 4 peças, seja na horizontal, vertical ou diagonal." wrappingWidth="609.3367309570312">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="6.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• O primeiro jogador a formar a sequência vence o jogo." wrappingWidth="626.1366577148438">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="8.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• Se todas as casas do tabuleiro forem preenchidas sem que nenhuma sequência de 4 peças seja formada, o jogo termina em empate." textAlignment="JUSTIFY" wrappingWidth="639.2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="251.0" layoutY="385.0" prefHeight="174.0" prefWidth="677.0">
+         <children>
+            <Text fill="WHITE" layoutX="13.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                         : ao inserir uma peça, qualquer peça vizinha horizontalmente a ela deve se transformar na peça inserida." wrappingWidth="626.1366577148438">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="13.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                                           : qualquer peça vizinha em qualquer direção à peça inserida poderá se transformar na peça inserida, de acordo com uma probabilidade definida pelo Nível de Maluquice." wrappingWidth="626.1366577148438">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="132.0" text="LIG 4 TURBO" textFill="#df5c5c">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="87.0" prefHeight="30.0" prefWidth="220.0" text="LIG 4 TURBO MALUCO" textFill="#df5c5c">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Button fx:id="jogarBtn" layoutX="450.0" layoutY="577.0" mnemonicParsing="false" onAction="#choseGameMode" prefHeight="50.0" prefWidth="300.0" styleClass="action-button" text="JOGAR" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Rounded MT Bold" size="22.0" />
+         </font></Button>
+      <Label layoutX="506.0" layoutY="358.0" text="Modos de Jogo Alternativos:" textFill="#ffcf00">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="60.0" layoutY="40.0" mnemonicParsing="false" onAction="#menu" prefHeight="40.0" prefWidth="80.0" styleClass="full-Btn" text="Voltar" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

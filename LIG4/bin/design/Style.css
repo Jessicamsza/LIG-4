@@ -1,0 +1,46 @@
+Button {
+    -fx-background-color: #7DB2B0;
+    -fx-background-radius: 44px;
+    -fx-border-width: 1px;
+    -fx-border-color: white;
+    -fx-border-radius: 44px;
+}
+
+Button:hover {
+    -fx-background-color: #6C9A98;
+}
+
+.menu-btn {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-background-radius: 15px;
+    -fx-border-width: 0px;
+}
+
+.menu-btn:hover {
+    -fx-background-color: #7DB2B0;
+    -fx-background-radius: 44px;
+    -fx-border-color: white;
+    -fx-border-radius: 44px;
+    -fx-border-width: 1px;
+}
+
+.col-Btn {
+    -fx-background-color: #7DB2B0;
+    -fx-background-radius: 50%;
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+    -fx-border-radius: 50%;
+}
+.col-Btn:hover{
+    -fx-background-color: #4e7271;
+}
+
+TextField {
+    -fx-background-color:rgba(255, 255, 255, 0.1);
+    -fx-text-fill: white;
+}
+
+ListView{
+    -fx-background-color:transparent;
+    -fx-text-fill: white;
+}
